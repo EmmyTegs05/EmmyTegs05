@@ -1,6 +1,6 @@
 # 🔍 Vulnerability Assessment and Penetration Testing
 
-**Course Project – 2023**
+**Course Project (04720 Ethical Hacking) – 2023**
 
 As part of a red team simulation, I conducted a full-scope penetration test against a simulated enterprise environment, mimicking real-world attack scenarios to uncover and exploit security weaknesses.
 
@@ -27,4 +27,4 @@ As part of a red team simulation, I conducted a full-scope penetration test agai
 - Importance of manual validation and accurate risk scoring
 - How to communicate technical risk to business stakeholders effectively
 
-> This red team project sharpened my offensive security skills and reinforced my understanding of real-world adversarial techniques.
+> This Red Team project sharpened my offensive security skills and reinforced my understanding of real-world adversarial techniques.
