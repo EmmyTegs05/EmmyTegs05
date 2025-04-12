@@ -5,18 +5,12 @@
 ---
 
 ## 👨‍💻 About Me
-[Brief Introduction - Remove this afterwards]
-
 Cybersecurity Engineer with a profound interest in Vulnerability Assessment and Penetration testing and a dedication to solving complex problems. I’ve worked with security teams to secure large-scale systems in both government and enterprise environments.
 
 ## 🎯 Objective
-[Provide Objective - Remove this afterwards]]
-
 Growing up, I witnessed technology's transformative power and its vulnerabilities without proper security. This personal experience fueled my career transition from physics to cybersecurity, with a specific goal of joining a Red Team operation as a Senior Penetration Tester.
 
 ## 🛠 Skills
-[Provide skills and associated project. Make sure to hyperlink the project - Remove this afterwards]]
-
 | Technical Skills                                    | Associated Project         |
 |-----------------------------------------------|----------------------------|
 | Web Application Security (OWASP Framework)          | <a href="https://docs.google.com/document/d/1cPAmLvYAeW_3OyWjalK5-RDfVitJXrib/edit#heading=h.opousfo6dxma">Cybersecurity in African E-Government Services</a>|
@@ -56,15 +50,10 @@ Growing up, I witnessed technology's transformative power and its vulnerabilitie
 ---
 
 ## 📜 Certifications
-[Provide certifications that you have obtained. Use ChatGPT to help create the link - Remove this afterwards]]
 <div>
 <a href="https://aspen.eccouncil.org/Badge?a=OUBgiCLyClJHEJEHGfhQ7Zvp7CWDj/dtNtkXeTHQEDI="><img src="https://img.shields.io/badge/-CEH%20Master-009688?&style=for-the-badge&logo=EC-Council&logoColor=white"/></a>
 <a href="https://aspen.eccouncil.org/Badge?a=OUBgiCLyClJHEJEHGfhQ7Yg8Sgso3VcHkxOr2rSW1I0="><img src="https://img.shields.io/badge/-CEH%20Practical-009688?&style=for-the-badge&logo=EC-Council&logoColor=white"/></a>
 <a href="https://aspen.eccouncil.org/Badge?a=UF4+aMxnAbdJD/3hqdc+KwjJt518kuoaWwk24mEIm5E="><img src="https://img.shields.io/badge/-CEH%20-009688?&style=for-the-badge&logo=EC-Council&logoColor=white"/></a>
-
-
-
-
 </div>
 
 ## 💻 Featured Projects
