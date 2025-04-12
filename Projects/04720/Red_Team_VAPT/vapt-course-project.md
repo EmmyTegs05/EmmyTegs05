@@ -1,6 +1,6 @@
 # 🔍 Vulnerability Assessment and Penetration Testing
 
-**Course Project (04720 Ethical Hacking) – 2023**
+**Course Project (04720 Ethical Hacking)**
 
 As part of a red team simulation, I conducted a full-scope penetration test against a simulated enterprise environment, mimicking real-world attack scenarios to uncover and exploit security weaknesses.
 
