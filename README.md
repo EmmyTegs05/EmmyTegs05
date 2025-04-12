@@ -85,10 +85,10 @@ I once hacked my home router (with permission!) to teach my siblings about passw
 ---
 
 ## 📫 Let's Connect
-- 📧 Email: [eagbragu@andrew.cmu.edu](mailto:eagbragu@andrew.cmu.edu)  
+- 📧 Email: [emmanuelagbragu@gmail.com](mailto:emmanuelagbragu@gmail.com)  
 - 🌐 Website/Portfolio: *(Insert your link here)*  
 - 💼 LinkedIn: [linkedin.com/in/emmanuel-agbragu](https://www.linkedin.com/in/emmanuel-agbragu)
 
 ---
 
-*“Attack to learn. Defend to protect. Repeat.”*
+*“Let's connect and secure the digital world together.”*
