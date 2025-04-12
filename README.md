@@ -25,73 +25,70 @@ Growing up, I witnessed technology's transformative power and its vulnerabilitie
 | Data Loss Prevention Implementation      | DLP Implementation Project|
 | Privilege Access Management            | Cyberark PAM Project|
 
+---
+
 ## 🔧 Tools
-[Provide tools and break them down into categories. Use ChatGPT to help create the link - Remove this afterwards]]
 
-Security Assessment & Penetration Testing
+### Offensive Security
 <div>
-    <img src="https://img.shields.io/badge/-Nmap-313131?&style=for-the-badge&logo=Nmap&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Nessus-00B32C?&style=for-the-badge&logo=Tenable&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Burp_Suite-FF6633?&style=for-the-badge&logo=Burp-Suite&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Metasploit-2A6B3D?&style=for-the-badge&logo=Metasploit&logoColor=white" />
-    <img src="https://img.shields.io/badge/-OWASP_ZAP-003B70?&style=for-the-badge&logo=OWASP&logoColor=white" />
-    <img src="https://img.shields.io/badge/-OpenVAS-559137?&style=for-the-badge&logo=OpenVAS&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Ghidra-3E4095?&style=for-the-badge&logo=Ghidra&logoColor=white" />
-</div>
-Network & System Security
-<div>
-    <img src="https://img.shields.io/badge/-Wireshark-1679A7?&style=for-the-badge&logo=Wireshark&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Security_Onion-8CC84B?&style=for-the-badge&logo=SecurityOnion&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Wazuh-1E90FF?&style=for-the-badge&logo=Wazuh&logoColor=white" />
-</div>
-Data Protection & Access Management
-<div>
-    <img src="https://img.shields.io/badge/-Symantec_DLP-FFC72C?&style=for-the-badge&logo=Symantec&logoColor=black" />
-    <img src="https://img.shields.io/badge/-CyberArk-003366?&style=for-the-badge&logo=CyberArk&logoColor=white" />
-</div>
-SIEM & Analytics
-<div>
-    <img src="https://img.shields.io/badge/-Elasticsearch-005571?&style=for-the-badge&logo=Elasticsearch&logoColor=white" />
-</div>
-AI/ML Tools & Programming
-<div>
-    <img src="https://img.shields.io/badge/-Python-3776AB?&style=for-the-badge&logo=Python&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Bash-4EAA25?&style=for-the-badge&logo=GNU-Bash&logoColor=white" />
-    <img src="https://img.shields.io/badge/-C%2FC%2B%2B-00599C?&style=for-the-badge&logo=C%2B%2B&logoColor=white" />
-    <img src="https://img.shields.io/badge/-SQL-4479A1?&style=for-the-badge&logo=MySQL&logoColor=white" />
-    <img src="https://img.shields.io/badge/-XGBoost-0078D4?&style=for-the-badge&logo=XGBoost&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Scikit_Learn-F7931E?&style=for-the-badge&logo=scikit-learn&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Metasploit-222222?&style=for-the-badge&logo=Metasploit&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Burp_Suite-FF6F00?&style=for-the-badge&logo=BurpSuite&logoColor=white" />
+  <img src="https://img.shields.io/badge/-OWASP_ZAP-026E00?&style=for-the-badge&logo=OWASP&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Ghidra-FF0000?&style=for-the-badge&logo=NSA&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Nmap-4CAF50?&style=for-the-badge&logo=Nmap&logoColor=white" />
 </div>
 
+### Blue Teaming / IR
+<div>
+  <img src="https://img.shields.io/badge/-TheHive-24292E?&style=for-the-badge&logo=TheHive&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Shuffle_SOAR-005571?&style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Wazuh-0066CC?&style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Security_Onion-303F9F?&style=for-the-badge&logoColor=white" />
+</div>
+
+### Scripting & Automation
+<div>
+  <img src="https://img.shields.io/badge/-Python-3776AB?&style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Bash-4EAA25?&style=for-the-badge&logo=gnubash&logoColor=white" />
+  <img src="https://img.shields.io/badge/-SQL-4479A1?&style=for-the-badge&logo=MySQL&logoColor=white" />
+</div>
+
+---
 
 ## 📜 Certifications
 [Provide certifications that you have obtained. Use ChatGPT to help create the link - Remove this afterwards]]
 <div>
-<img src="https://img.shields.io/badge/-Security%2B-FF0000?&style=for-the-badge&logo=CompTIA&logoColor=white" />
-<img src="https://img.shields.io/badge/-Network%2B-007ACC?&style=for-the-badge&logo=CompTIA&logoColor=white" />
+<a href="https://aspen.eccouncil.org/Badge?a=OUBgiCLyClJHEJEHGfhQ7Zvp7CWDj/dtNtkXeTHQEDI="><img src="https://img.shields.io/badge/-CEH%20Master-009688?&style=for-the-badge&logo=EC-Council&logoColor=white"/></a>
+<a href="https://aspen.eccouncil.org/Badge?a=OUBgiCLyClJHEJEHGfhQ7Yg8Sgso3VcHkxOr2rSW1I0="><img src="https://img.shields.io/badge/-CEH%20Practical-009688?&style=for-the-badge&logo=EC-Council&logoColor=white"/></a>
+<a href="https://aspen.eccouncil.org/Badge?a=UF4+aMxnAbdJD/3hqdc+KwjJt518kuoaWwk24mEIm5E="><img src="https://img.shields.io/badge/-CEH%20-009688?&style=for-the-badge&logo=EC-Council&logoColor=white"/></a>
+
+
+
 
 </div>
 
-## 💻 Projects
+## 💻 Featured Projects
 
 ### 🔍 [Vulnerability Assessment of E-Gov Services (2024)]()
 - Assessed digital government platforms across 55 countries
-- Identified over 400 vulnerabilities including critical SQLi and XSS flaws
-- Delivered mitigation strategy and co-authored a technical report
+- Discovered 400+ vulnerabilities including critical SQLi and XSS flaws
+- Delivered mitigation strategy and co-authored a technical report with technical and non-technical stakeholders
 
-### 🛡️ [SOC Automation Project](#)
-- Built a mini SOC environment with Shuffle SOAR, TheHive, Wazuh, and Suricata
-- Automated alert ingestion and enrichment
-- Configured playbooks for tier-1 triage and incident resolution
+### 🐚 [Building a Plaid Shell (2023)]()
+- Leveraged understanding of data structures and linked lists in C to build a functional Linux shell
+- Implemented commands like `echo`, `cat`, `grep`, and `sed`
+- Gained deep insight into system-level programming and terminal interaction
 
-### 🧪 [Detection Lab Setup](https://github.com/clong/DetectionLab)
-- Deployed SIEM tools and monitored malicious traffic
-- Practiced threat hunting and log analysis across Windows endpoints
+### 🔐 [Data Loss Prevention Implementation (2022–2023)]()
+- Implemented enterprise-wide DLP systems (Symantec DLP, Nessus) at First Bank of Nigeria
+- Enhanced data protection against unauthorized modification, disclosure, and destruction
+- Optimized perimeter security monitoring and improved incident detection accuracy
+- Provided support for troubleshooting and policy management both onsite and remotely
 
-### 🖥️ [Machine Learning for Threat Detection (2024)]()
-- Used supervised ML (Random Forest, XGBoost) for anomaly classification
-- Achieved 82% detection accuracy on cybersecurity event datasets
-
+### 🔒 [Privilege Access Management – First City Monument Bank (2021)]()
+- Implemented comprehensive CyberArk components: PVWA, PSM, CPM, PSMP, and AAM to secure privileged accounts
+- Designed and enforced secure authentication and access control policies in line with industry best practices
+- Delivered technical support (onsite and offsite) for troubleshooting, policy updates, and system optimization
 
 ## 🧠 Fun Fact  
 I once hacked my home router (with permission!) to teach my siblings about password hygiene. Now they quiz *me* about threat modeling!
