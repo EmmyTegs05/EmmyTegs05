@@ -2,94 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emmanuel Tega Agbragu | Cybersecurity Portfolio</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #0f172a;
-      color: #f1f5f9;
-      padding: 2rem;
+      color: #f8fafc;
       line-height: 1.6;
     }
     header {
+      background-color: #1e293b;
+      padding: 2rem;
       text-align: center;
-      margin-bottom: 3rem;
     }
-    h1 {
+    header h1 {
       font-size: 2.5rem;
       color: #38bdf8;
-      margin: 0;
+      margin-bottom: 0.5rem;
     }
-    p {
+    header p {
       font-size: 1.2rem;
       color: #94a3b8;
     }
-    section {
-      max-width: 900px;
-      margin: 0 auto 3rem;
-      padding: 1.5rem;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
       background-color: #1e293b;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      padding: 1rem;
+      border-top: 1px solid #334155;
+      border-bottom: 1px solid #334155;
     }
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 1rem;
-    }
-    a {
+    nav a {
       color: #60a5fa;
       text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section h2 {
+      color: #38bdf8;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 0.5rem;
     }
     ul {
-      padding-left: 1.2rem;
+      list-style-type: disc;
+      padding-left: 1.5rem;
     }
-    li {
-      margin-bottom: 0.5rem;
+    .project-card {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .project-card a {
+      color: #60a5fa;
+      font-weight: bold;
     }
     footer {
       text-align: center;
-      margin-top: 4rem;
-      font-size: 0.9rem;
+      padding: 1rem;
+      background-color: #1e293b;
+      border-top: 1px solid #334155;
       color: #64748b;
+    }
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Emmanuel Tega Agbragu</h1>
     <p>Cybersecurity Professional | Penetration Tester | Red Team Enthusiast</p>
   </header>
 
-  <section>
-    <h2>📄 Resume</h2>
-    <p><a href="assets/Emmanuel_Tega_Agbragu_Resume.pdf" target="_blank">Download My Resume (PDF)</a></p>
-  </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <section>
-    <h2>📁 Featured Projects</h2>
-    <ul>
-      <li><a href="projects/egov-vulnerability-assessment.md">E-Gov Vulnerability Assessment</a></li>
-      <li><a href="projects/vapt-course-project.md">Red Team Penetration Testing (Course Project)</a></li>
-      <li><a href="projects/plaid-shell.md">Building a Plaid Shell</a></li>
-      <li><a href="projects/dlp-implementation.md">Data Loss Prevention at First Bank</a></li>
-      <li><a href="projects/cyberark-pam.md">CyberArk PAM at FCMB</a></li>
-    </ul>
-  </section>
+  <main class="container">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I’m Emmanuel Tega Agbragu, a cybersecurity engineer with hands-on experience in offensive security, penetration testing, and vulnerability assessments. I specialize in simulating adversarial attacks to help secure enterprise and government systems.
+      </p>
+    </section>
 
-  <section>
-    <h2>🔗 Quick Links</h2>
-    <ul>
-      <li><a href="README.md">GitHub Profile README</a></li>
-      <li><a href="https://www.linkedin.com/in/emmanuel-agbragu" target="_blank">LinkedIn</a></li>
-      <li><a href="mailto:emmanuelagbragu@gmail.com">Email Me</a></li>
-    </ul>
-  </section>
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+
+      <div class="project-card">
+        <a href="projects/egov-vulnerability-assessment.md">Vulnerability Assessment of E-Gov Services</a>
+        <p>Scanned 50,000+ URLs and reported 400+ vulnerabilities across 55 countries.</p>
+      </div>
+
+      <div class="project-card">
+        <a href="projects/vapt-course-project.md">Red Team Penetration Testing</a>
+        <p>Simulated enterprise penetration testing. Identified SQLi and XSS, and delivered a full technical report.</p>
+      </div>
+
+      <div class="project-card">
+        <a href="projects/plaid-shell.md">Building a Plaid Shell</a>
+        <p>Implemented a UNIX shell in C to handle custom terminal commands with process control and memory management.</p>
+      </div>
+
+      <div class="project-card">
+        <a href="projects/dlp-implementation.md">Data Loss Prevention at First Bank</a>
+        <p>Deployed Symantec DLP and Nessus to protect data and reduce policy violations.</p>
+      </div>
+
+      <div class="project-card">
+        <a href="projects/cyberark-pam.md">CyberArk PAM at FCMB</a>
+        <p>Implemented privileged access control using CyberArk for secure admin operations.</p>
+      </div>
+    </section>
+
+    <section id="resume" class="section">
+      <h2>Resume</h2>
+      <p>
+        📄 <a href="assets/Emmanuel_Tega_Agbragu_Resume.pdf" target="_blank">Download My Resume (PDF)</a>
+      </p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:emmanuelagbragu@gmail.com">emmanuelagbragu@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-agbragu" target="_blank">linkedin.com/in/emmanuel-agbragu</a></li>
+        <li>GitHub README: <a href="README.md">View Profile</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
     <p>Built with ❤️ using GitHub Pages</p>
   </footer>
-
 </body>
 </html>
