@@ -4,154 +4,927 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emmanuel Tega Agbragu | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body {
+    :root {
+      --primary: #38bdf8;
+      --secondary: #60a5fa;
+      --dark: #0f172a;
+      --darker: #0b1121;
+      --light: #f8fafc;
+      --mid: #1e293b;
+      --border: #334155;
+      --text-muted: #94a3b8;
+      --text-secondary: #64748b;
+    }
+    
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
       line-height: 1.6;
     }
-    header {
-      background-color: #1e293b;
-      padding: 2rem;
-      text-align: center;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
     }
-    header h1 {
+    
+    /* Header */
+    header {
+      background-color: var(--darker);
+      padding: 2rem 0;
+      position: relative;
+    }
+    
+    .profile-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+    }
+    
+    .profile-title h1 {
       font-size: 2.5rem;
-      color: #38bdf8;
+      color: var(--primary);
       margin-bottom: 0.5rem;
     }
-    header p {
+    
+    .profile-subtitle {
       font-size: 1.2rem;
-      color: #94a3b8;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
     }
-    nav {
+    
+    .social-links {
       display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
       justify-content: center;
-      gap: 2rem;
-      background-color: #1e293b;
-      padding: 1rem;
-      border-top: 1px solid #334155;
-      border-bottom: 1px solid #334155;
     }
-    nav a {
-      color: #60a5fa;
+    
+    .social-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--mid);
+      color: var(--light);
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      font-weight: 500;
     }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
+    
+    .social-button:hover {
+      background-color: var(--primary);
+      color: var(--darker);
+      transform: translateY(-3px);
     }
+    
+    .social-button i {
+      margin-right: 0.5rem;
+    }
+    
+    /* Navigation */
+    nav {
+      background-color: var(--mid);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-item {
+      position: relative;
+    }
+    
+    .nav-link {
+      display: block;
+      color: var(--light);
+      text-decoration: none;
+      padding: 1.5rem 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-link.active {
+      color: var(--primary);
+    }
+    
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+      right: 1rem;
+      height: 3px;
+      background-color: var(--primary);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--light);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+    
     .section {
+      margin-bottom: 4rem;
+    }
+    
+    .section-title {
+      position: relative;
+      color: var(--primary);
+      font-size: 2rem;
       margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
     }
-    .section h2 {
-      color: #38bdf8;
-      border-bottom: 2px solid #334155;
-      padding-bottom: 0.5rem;
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background-color: var(--primary);
     }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
+    
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
     }
-    .project-card {
-      background-color: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 10px;
-      padding: 1rem;
+    
+    .about-text p {
+      margin-bottom: 1.5rem;
+    }
+    
+    .emoji-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       margin-bottom: 1rem;
     }
-    .project-card a {
-      color: #60a5fa;
+    
+    .emoji-title i {
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+    
+    /* Skills Section */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .skill-card {
+      background-color: var(--mid);
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .skill-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .skill-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary);
+      color: var(--darker);
+      border-radius: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .skill-title {
+      font-size: 1.25rem;
+      color: var(--light);
+    }
+    
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    
+    .tool-item {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .tool-item i {
+      color: var(--primary);
+    }
+    
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    
+    .project-card {
+      background-color: var(--mid);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-7px);
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .project-content {
+      padding: 1.5rem;
+    }
+    
+    .project-title {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+    
+    .project-description {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-tag {
+      background-color: rgba(56, 189, 248, 0.1);
+      color: var(--primary);
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .project-link {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+    
+    .project-link:hover {
+      color: var(--primary);
+    }
+    
+    /* Certifications */
+    .cert-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .cert-badge {
+      transition: transform 0.3s ease;
+    }
+    
+    .cert-badge:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Contact Section */
+    .contact-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .contact-info {
+      background-color: var(--mid);
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    
+    .contact-list {
+      list-style: none;
+    }
+    
+    .contact-item {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(56, 189, 248, 0.1);
+      color: var(--primary);
+      border-radius: 50%;
+      font-size: 1.2rem;
+    }
+    
+    .contact-details h4 {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: normal;
+      margin-bottom: 0.25rem;
+    }
+    
+    .contact-details p, .contact-details a {
+      color: var(--light);
+      text-decoration: none;
+    }
+    
+    .contact-details a:hover {
+      color: var(--primary);
+    }
+    
+    /* Form Styling */
+    .contact-form {
+      background-color: var(--mid);
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      color: var(--light);
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary);
+      color: var(--darker);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: var(--secondary);
+      transform: translateY(-3px);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--darker);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .footer-logo {
+      color: var(--primary);
+      font-size: 1.5rem;
       font-weight: bold;
     }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #1e293b;
-      border-top: 1px solid #334155;
-      color: #64748b;
+    
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1rem 0;
     }
-    @media screen and (max-width: 600px) {
-      nav {
+    
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+      color: var(--primary);
+    }
+    
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: var(--mid);
+      color: var(--light);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      background-color: var(--primary);
+      color: var(--darker);
+      transform: translateY(-3px);
+    }
+    
+    .footer-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
         flex-direction: column;
-        gap: 1rem;
+        background-color: var(--mid);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+      
+      .nav-item {
+        margin: 1.5rem 0;
+      }
+      
+      .nav-link.active::after {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .profile-image {
+        width: 150px;
+        height: 150px;
+      }
+      
+      .profile-title h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+      }
+      
+      .skills-container, .projects-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
+
 <body>
+  <!-- Header Section -->
   <header>
-    <h1>Emmanuel Tega Agbragu</h1>
-    <p>Cybersecurity Professional | Penetration Tester | Red Team Enthusiast</p>
+    <div class="container">
+      <div class="profile-container">
+        <img src="/api/placeholder/180/180" alt="Emmanuel Tega Agbragu" class="profile-image" />
+        <div class="profile-title">
+          <h1>Emmanuel Tega Agbragu</h1>
+        </div>
+        <div class="profile-subtitle">
+          Cybersecurity Engineer | Penetration Tester | Red Team Enthusiast
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/emmanuel-agbragu" class="social-button" target="_blank">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+          <a href="mailto:eagbragu@andrew.cmu.edu" class="social-button">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://github.com/emmanuelagbragu" class="social-button" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
 
+  <!-- Navigation -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
+    <div class="container nav-container">
+      <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#about" class="nav-link active">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#certifications" class="nav-link">Certifications</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 
-  <main class="container">
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        I’m Emmanuel Tega Agbragu, a cybersecurity engineer with hands-on experience in offensive security, penetration testing, and vulnerability assessments. I specialize in simulating adversarial attacks to help secure enterprise and government systems.
-      </p>
-    </section>
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <!-- About Section -->
+      <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              Cybersecurity Engineer with a profound interest in Vulnerability Assessment and Penetration Testing and a dedication to solving complex problems. I've worked with security teams to secure large-scale systems in both government and enterprise environments.
+            </p>
+            <p>
+              Currently pursuing my Master's in Information Technology with a specialization in Cybersecurity at Carnegie Mellon University Africa, combining academic knowledge with practical security expertise.
+            </p>
+            <div class="emoji-title">
+              <i class="fas fa-crosshairs"></i>
+              <h3>Objective</h3>
+            </div>
+            <p>
+              Growing up, I witnessed technology's transformative power and its vulnerabilities without proper security. This personal experience fueled my career transition from physics to cybersecurity, with a specific goal of joining a Red Team operation as a Senior Penetration Tester.
+            </p>
+            <p>
+              I aim to leverage my technical expertise in cybersecurity to contribute to developing innovative security solutions that protect critical infrastructure from emerging threats.
+            </p>
+          </div>
+          <div class="about-stats">
+            <div class="skill-card">
+              <div class="emoji-title">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Education</h3>
+              </div>
+              <ul>
+                <li>MS in Information Technology - Cybersecurity (Carnegie Mellon University Africa)</li>
+                <li>BS in Physics (First Class Honours)</li>
+              </ul>
+              
+              <div class="emoji-title" style="margin-top: 1.5rem;">
+                <i class="fas fa-briefcase"></i>
+                <h3>Experience</h3>
+              </div>
+              <ul>
+                <li>Security Engineer, First Bank of Nigeria (2022-2023)</li>
+                <li>Cybersecurity Analyst, FCMB (2021-2022)</li>
+                <li>IT Security Specialist, Lumenave International Limited (2019-2021)</li>
+              </ul>
+              
+              <div class="emoji-title" style="margin-top: 1.5rem;">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Fun Fact</h3>
+              </div>
+              <p>I once hacked my home router (with permission!) to teach my siblings about password hygiene. Now they quiz <em>me</em> about threat modeling!</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="projects" class="section">
-      <h2>Featured Projects</h2>
+      <!-- Skills Section -->
+      <section id="skills" class="section">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-user-secret"></i>
+              </div>
+              <h3 class="skill-title">Offensive Security</h3>
+            </div>
+            <p>Expertise in penetration testing methodologies and vulnerability assessment using industry-standard tools and frameworks.</p>
+            <div class="tools-grid">
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Metasploit</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Burp Suite</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>OWASP ZAP</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Ghidra</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Nmap</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>OpenVAS</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="skill-title">Blue Teaming / IR</h3>
+            </div>
+            <p>Implementation of security monitoring solutions and incident response procedures to protect critical infrastructure.</p>
+            <div class="tools-grid">
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>TheHive</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Shuffle SOAR</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Wazuh</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Security Onion</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Symantec DLP</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>CyberArk</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="skill-title">Programming & Scripting</h3>
+            </div>
+            <p>Development of custom security tools and automation scripts for security testing and system hardening.</p>
+            <div class="tools-grid">
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Python</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Bash</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>C/C++</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>SQL</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Git</span>
+              </div>
+              <div class="tool-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="project-card">
-        <a href="projects/egov-vulnerability-assessment.md">Vulnerability Assessment of E-Gov Services</a>
-        <p>Scanned 50,000+ URLs and reported 400+ vulnerabilities across 55 countries.</p>
-      </div>
+      <!-- Projects Section -->
+      <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="/api/placeholder/400/200" alt="E-Gov Services Vulnerability Assessment" class="project-image" />
+            <div class="project-content">
+              <h3 class="project-title">Vulnerability Assessment of E-Gov Services</h3>
+              <p class="project-description">
+                Assessed digital government platforms across 55 countries, discovered 400+ vulnerabilities including critical SQLi and XSS flaws, and delivered mitigation strategies.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">OWASP</span>
+                <span class="project-tag">Burp Suite</span>
+                <span class="project-tag">ZAP</span>
+                <span class="project-tag">Web Security</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/egov-vulnerability-assessment.md" class="project-link">
+                  <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="https://github.com/emmanuelagbragu/egovernment-security-assessment" class="project-link">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <img src="/api/placeholder/400/200" alt="Building a Plaid Shell" class="project-image" />
+            <div class="project-content">
+              <h3 class="project-title">Building a Plaid Shell</h3>
+              <p class="project-description">
+                Implemented a functional Linux shell in C with custom commands like echo, cat, grep, and sed, gaining deep insight into system-level programming.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">C</span>
+                <span class="project-tag">Linux</span>
+                <span class="project-tag">System Programming</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/plaid-shell.md" class="project-link">
+                  <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="https://github.com/emmanuelagbragu/plaid-shell" class="project-link">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <img src="/api/placeholder/400/200" alt="Data Loss Prevention Implementation" class="project-image" />
+            <div class="project-content">
+              <h3 class="project-title">Data Loss Prevention Implementation</h3>
+              <p class="project-description">
+                Implemented enterprise-wide DLP systems at First Bank of Nigeria, enhancing data protection against unauthorized modification, disclosure, and destruction.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Symantec DLP</span>
+                <span class="project-tag">Nessus</span>
+                <span class="project-tag">Security Policy</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/dlp-implementation.md" class="project-link">
+                  <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="https://github.com/emmanuelagbragu/data-loss-prevention" class="project-link">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <img src="/api/placeholder/400/200" alt="Privilege Access Management" class="project-image" />
+            <div class="project-content">
+              <h3 class="project-title">Privilege Access Management</h3>
+              <p class="project-description">
+                Implemented comprehensive CyberArk components at FCMB to secure privileged accounts and enforce secure authentication and access control policies.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">CyberArk</span>
+                <span class="project-tag">PAM</span>
+                <span class="project-tag">Access Control</span>
+              </div>
+              <div class="project-links">
+                <a href="projects/cyberark-pam.md" class="project-link">
+                  <i class="fas fa-info-circle"></i> Details
+                </a>
+                <a href="https://github.com/emmanuelagbragu/privileged-access-management" class="project-link">
+                  <i class="fab fa-github"></i> Repository
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="project-card">
-        <a href="projects/vapt-course-project.md">Red Team Penetration Testing</a>
-        <p>Simulated enterprise penetration testing. Identified SQLi and XSS, and delivered a full technical report.</p>
-      </div>
-
-      <div class="project-card">
-        <a href="projects/plaid-shell.md">Building a Plaid Shell</a>
-        <p>Implemented a UNIX shell in C to handle custom terminal commands with process control and memory management.</p>
-      </div>
-
-      <div class="project-card">
-        <a href="projects/dlp-implementation.md">Data Loss Prevention at First Bank</a>
-        <p>Deployed Symantec DLP and Nessus to protect data and reduce policy violations.</p>
-      </div>
-
-      <div class="project-card">
-        <a href="projects/cyberark-pam.md">CyberArk PAM at FCMB</a>
-        <p>Implemented privileged access control using CyberArk for secure admin operations.</p>
-      </div>
-    </section>
-
-    <section id="resume" class="section">
-      <h2>Resume</h2>
-      <p>
-        📄 <a href="assets/Emmanuel_Tega_Agbragu_Resume.pdf" target="_blank">Download My Resume (PDF)</a>
-      </p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:emmanuelagbragu@gmail.com">emmanuelagbragu@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-agbragu" target="_blank">linkedin.com/in/emmanuel-agbragu</a></li>
-        <li>GitHub README: <a href="README.md">View Profile</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>Built with ❤️ using GitHub Pages</p>
-  </footer>
-</body>
-</html>
+      <!-- Certifications Section -->
+      <section id="certifications" class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-container">
+          <a href="https://aspen.eccouncil.org/Badge?a=O
