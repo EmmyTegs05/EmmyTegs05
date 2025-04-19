@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emmanuel Tega Agbragu | Cybersecurity Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
-      background-color: #0f172a;
+      background: linear-gradient(to bottom, #0f172a, #000000);
+      background-image: 
+        linear-gradient(to right, #1a202c 1px, transparent 1px),
+        linear-gradient(to bottom, #1a202c 1px, transparent 1px);
+      background-size: 20px 20px, auto;
       color: #f1f5f9;
       font-family: 'Roboto Mono', monospace;
     }
@@ -19,7 +23,161 @@
       transition: color 0.3s ease;
     }
     .section-bg {
-      background-color: #1e293b;
+      background-color: rgba(30, 41, 59, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+    .btn {
+      background-color: #38bdf8;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #60a5fa;
+      transform: scale(1.05);
+    }
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .skill-icon {
+      transition: color 0.3s ease;
+    }
+    .skill-icon:hover {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+<body class="leading-relaxed">
+  <!-- Navigation -->
+  <nav class="bg-gray-900 p-4 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-2xl font-bold text-blue-400">Emmanuel Tega</div>
+      <div class="space-x-6">
+        <a href="#home" class="nav-link text-gray-300">Home</a>
+        <a href="#about" class="nav-link text-gray-300">About</a>
+        <a href="#skills" class="nav-link text-gray-300">Skills</a>
+        <a href="#projects" class="nav-link text-gray-300">Projects</a>
+        <a href="#certifications" class="nav-link text-gray-300">Certifications</a>
+        <a href="#contact" class="nav-link text-gray-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+      <source src="assets/cyber-background.mp4" type="video/mp4">
+    </video>
+    <div class="relative z-10" data-aos="fade-up">
+      <img src="assets/profile-image.jpg" alt="Emmanuel Tega Agbragu" class="w-40 h-40 rounded-full mx-auto mb-4 border-4 border-blue-400" />
+      <h1 class="text-5xl md:text-6xl font-bold text-blue-400 mb-4">Emmanuel Tega Agbragu</h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-6">Cybersecurity Engineer | Penetration Tester | Red Team Enthusiast</p>
+      <a href="#projects" class="btn text-white inline-block">View My Work</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto py-16 px-4 section-bg" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-blue-400 mb-6 text-center">About Me</h2>
+    <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+      I’m Emmanuel Tega Agbragu, a cybersecurity professional and Master’s student at Carnegie Mellon University Africa, specializing in offensive security and red teaming. With over two years of professional experience in enterprise cybersecurity and hands-on expertise in penetration testing, vulnerability research, and firewall management, I bring deep technical capability combined with strategic thinking.
+    </p>
+    <p class="text-gray-300 max-w-3xl mx-auto mt-4 text-lg">
+      My recent work includes a large-scale vulnerability assessment on e-government platforms across 55 countries, identifying over 400 confirmed security issues—150 of which were high-severity, such as SQL injection and XSS flaws. My mission is to help organizations <strong>think like attackers to defend better</strong>.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container mx-auto py-16 px-4 section-bg" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-blue-400 mb-6 text-center">Skills & Tools</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <i class="fas fa-code text-4xl text-gray-300 skill-icon mb-2"></i>
+        <p class="text-gray-300">Burp Suite</p>
+      </div>
+      <div>
+        <i class="fas fa-shield-alt text-4xl text-gray-300 skill-icon mb-2"></i>
+        <p class="text-gray-300">Nmap</p>
+      </div>
+      <div>
+        <i class="fas fa-terminal text-4xl text-gray-300 skill-icon mb-2"></i>
+        <p class="text-gray-300">Metasploit</p>
+      </div>
+      <div>
+        <i class="fas fa-brain text-4xl text-gray-300 skill-icon mb-2"></i>
+        <p class="text-gray-300">Wireshark</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container mx-auto py-16I apologize for the incomplete response. Below is the complete and corrected version of the updated `index.html` for your cybersecurity portfolio website, incorporating a new background design with a gradient and subtle grid pattern, as well as additional design elements to address your concern about the site looking "blank" and lacking design. The response follows the required format with a direct answer section, a detailed report section, and the artifact wrapped in the `<xaiArtifact>` tag.
+
+---
+
+### Key Points
+- You can enhance your portfolio website's background to make it more visually appealing by replacing the plain dark background with a gradient and a subtle grid pattern, adding depth and texture.
+- Alternatively, a cybersecurity-themed background image with a semi-transparent overlay can be used to align with your professional focus, ensuring text readability.
+- Additional design elements, such as hover effects, icons, and subtle animations, have been included to make the site feel more polished and engaging, addressing your request to "put designs."
+- The updated design maintains the dark theme and professional aesthetic suitable for a cybersecurity portfolio, aligning with 2025 design trends.
+
+### Changing the Background
+To address your concern that the website's background looks "blank," the updated design replaces the solid dark color (`#0f172a`) with a linear gradient transitioning from dark blue to black, combined with a subtle grid pattern. This adds visual depth and a tech-inspired texture without overwhelming the content. You can easily modify the CSS to adjust the gradient colors or pattern size to suit your preferences.
+
+### Using a Cybersecurity-Themed Image
+If you prefer a more thematic background, you can use a cybersecurity-related image, such as a circuit board or digital network, sourced from platforms like [Unsplash](https://unsplash.com/s/photos/cyber-security) or [Pexels](https://www.pexels.com/search/cyber%20security/). Place the image in your `assets` folder and update the CSS to include a semi-transparent overlay for the sections, ensuring text remains readable. Instructions for this alternative are provided in the code comments.
+
+### Enhancing Design Elements
+To make the site feel less "blank" and incorporate more "designs," the updated version includes:
+- **Hover Effects**: Project cards and skill icons have smooth transitions for interactivity.
+- **Icons**: Font Awesome icons in the skills and contact sections add visual interest.
+- **Animations**: Subtle fade-in effects using AOS (Animate On Scroll) enhance the user experience.
+- **Typography**: A tech-inspired font (Roboto Mono) reinforces the cybersecurity aesthetic.
+
+### Updated Website Code
+The updated `index.html` below integrates these changes while preserving the existing structure, navigation, and content from your repository (e.g., `projects`, `assets`, `certs` folders). The background now uses a gradient and grid pattern, but you can switch to a background image by following the commented instructions.
+
+---
+
+<xaiArtifact artifact_id="751e2c2b-ca6b-4467-96c9-d367c0abae2f" artifact_version_id="32404b35-bbc9-4a62-8eff-917319eaeb7b" title="index.html" contentType="text/html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emmanuel Tega Agbragu | Cybersecurity Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      /* Gradient with subtle grid pattern */
+      background: linear-gradient(to bottom, #0f172a, #000000);
+      background-image: 
+        linear-gradient(to right, #1a202c 1px, transparent 1px),
+        linear-gradient(to bottom, #1a202c 1px, transparent 1px);
+      background-size: 20px 20px, auto;
+      color: #f1f5f9;
+      font-family: 'Roboto Mono', monospace;
+      /* Alternative: Use a background image
+      background-image: url('assets/cyber-background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      */
+    }
+    .nav-link:hover {
+      color: #38bdf8;
+      transition: color 0.3s ease;
+    }
+    .section-bg {
+      background-color: rgba(30, 41, 59, 0.8);
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     }
@@ -150,7 +308,6 @@
         <p class="text-gray-400">Issued by CompTIA</p>
         <a href="certs/security-plus.pdf" target="_blank" class="text-blue-400 mt-2 inline-block">View Certificate</a>
       </div>
-      <!-- Add more certifications as needed -->
     </div>
   </section>
 
