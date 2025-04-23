@@ -58,7 +58,7 @@ Growing up, I witnessed technology's transformative power and its vulnerabilitie
 
 ## 💻 Featured Projects
 
-### 🔍 [Vulnerability Assessment of E-Gov Services (2024)](./Projects/egov-Vulnerability Assessment/)
+### 🔍 [Vulnerability Assessment of E-Gov Services (2024)](/Projects/egov-Vulnerability Assessment/)
 - Assessed digital government platforms across 55 countries
 - Discovered 400+ vulnerabilities including critical SQLi and XSS flaws
 - Delivered mitigation strategy and co-authored a technical report with technical and non-technical stakeholders
