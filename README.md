@@ -58,7 +58,7 @@ Growing up, I witnessed technology's transformative power and its vulnerabilitie
 
 ## 💻 Featured Projects
 
-### 🔍 [Vulnerability Assessment of E-Gov Services (2024)]<a href="https://github.com/EmmyTegs/EmmyTegs/tree/main/Projects/egov-Vulnerability%20Assessment"> 
+### 🔍 <a href="https://github.com/EmmyTegs/EmmyTegs/tree/main/Projects/egov-Vulnerability%20Assessment"> [Vulnerability Assessment of E-Gov Services (2024)]
 - Assessed digital government platforms across 55 countries
 - Discovered 400+ vulnerabilities including critical SQLi and XSS flaws
 - Delivered mitigation strategy and co-authored a technical report with technical and non-technical stakeholders
