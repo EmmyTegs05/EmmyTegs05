@@ -7,153 +7,184 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
-      color: #0f172a;
-      background: #0b1220 url('assets/hackr.jpg') center/cover fixed no-repeat;
-    }
-    .glass {
-      background: rgba(2, 6, 23, 0.6);
-      backdrop-filter: saturate(140%) blur(6px);
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-    .chip { border: 1px solid rgba(148,163,184,0.25); }
-    .link:hover { color: #60a5fa; }
-    .brand-gradient { background: linear-gradient(90deg, #38bdf8, #22c55e); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  </style>
   <meta name="description" content="Portfolio of Emmanuel Tega — Security Researcher, Penetration Tester, and Cybersecurity Engineer." />
   <meta property="og:title" content="Emmanuel Tega | Security Researcher" />
   <meta property="og:description" content="Web & API security, red teaming, cloud security. Featured work and certifications." />
   <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --ink:#e5e7eb;          /* text */
+      --muted:#cbd5e1;        /* secondary text */
+      --bg:#0b1220;           /* page background */
+      --card:#0f172a;         /* card base */
+      --border:rgba(148,163,184,.18);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+    /* Background image with a gentle dark overlay, sits behind everything */
+    body::before{
+      content:"";
+      position:fixed; inset:0; z-index:-1;
+      background: url('assets/hackr.jpg') center/cover no-repeat;
+      filter: grayscale(100%) contrast(110%) brightness(55%);
+      opacity:.25;              /* <- dial this if you want more/less image */
+    }
+    /* Glass cards – higher opacity for readability */
+    .glass{
+      background: rgba(15,23,42,.9);       /* ~90% opaque */
+      border: 1px solid var(--border);
+      backdrop-filter: blur(4px) saturate(120%);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      color: var(--ink);
+    }
+    .chip { border:1px solid var(--border); color: var(--muted); }
+    .link{ color: var(--muted); transition: color .15s ease; }
+    .link:hover{ color:#7dd3fc; }
+    .brand-gradient { background: linear-gradient(90deg,#38bdf8,#22c55e); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    /* Make paragraphs/lists inside cards brighter by default */
+    .glass p, .glass li { color: var(--ink); }
+    .muted { color: var(--muted); }
+    /* Improve hero heading legibility */
+    .hero h1 { text-shadow: 0 2px 18px rgba(0,0,0,.45); }
+  </style>
 </head>
 <body class="antialiased">
+  <!-- Header -->
   <header class="sticky top-0 z-30 glass">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#home" class="text-xl font-bold brand-gradient">Emmanuel Tega</a>
-      <nav class="hidden md:flex items-center space-x-6 text-slate-200">
+      <nav class="hidden md:flex items-center space-x-6">
         <a href="#about" class="link">About</a>
         <a href="#projects" class="link">Projects</a>
         <a href="#skills" class="link">Skills</a>
         <a href="#certs" class="link">Certifications</a>
         <a href="#contact" class="link">Contact</a>
       </nav>
-      <div class="md:hidden text-slate-200">
+      <div class="md:hidden">
         <a href="#contact" class="link"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </header>
 
+  <!-- Hero -->
   <section id="home" class="relative">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-6 items-center pt-12 md:pt-20">
-        <div class="md:col-span-2 glass rounded-2xl p-8">
-          <h1 class="text-3xl md:text-5xl font-extrabold text-slate-100 leading-tight">
+        <div class="md:col-span-2 glass rounded-2xl p-8 hero">
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
             Hello, I'm <span class="brand-gradient">Emmanuel</span> 👋
           </h1>
-          <p class="mt-3 text-slate-300 text-lg">Security Researcher · Penetration Tester · Cybersecurity Engineer</p>
-          <p class="mt-5 text-slate-300">
+          <p class="mt-3 text-lg muted">Security Researcher · Penetration Tester · Cybersecurity Engineer</p>
+          <p class="mt-5">
             I secure web apps, APIs, and cloud workloads. I translate findings into clear, risk-based remediation for technical and non-technical stakeholders.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="https://emmytegs05.github.io/" target="_blank" class="px-4 py-2 rounded-md bg-sky-500 text-white hover:bg-sky-400">Website</a>
-            <a href="assets/Emmanuel_Tega_Agbragu_Resume.pdf" target="_blank" class="px-4 py-2 rounded-md bg-emerald-500 text-white hover:bg-emerald-400">Resume (PDF)</a>
+            <a href="https://emmytegs05.github.io/EmmyTegs05/" target="_blank" class="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-400">Website</a>
+            <a href="assets/Emmanuel_Tega_Agbragu_Resume.pdf" target="_blank" class="px-4 py-2 rounded-md bg-green-500 text-white hover:bg-green-400">Resume (PDF)</a>
             <a href="mailto:emmanuelagbragu@gmail.com" class="px-4 py-2 rounded-md bg-slate-700 text-white hover:bg-slate-600">Email</a>
             <a href="https://www.linkedin.com/in/emmanuel-agbragu" target="_blank" class="px-4 py-2 rounded-md bg-slate-700 text-white hover:bg-slate-600">LinkedIn</a>
           </div>
         </div>
         <div class="flex justify-center">
-          <img src="assets/Emmanuel.jpg" alt="Emmanuel Tega" class="w-44 h-44 md:w-60 md:h-60 rounded-2xl object-cover ring-4 ring-sky-500/60 shadow-2xl" />
+          <img src="assets/Emmanuel.jpg" alt="Emmanuel Tega" class="w-44 h-44 md:w-60 md:h-60 rounded-2xl object-cover ring-4 ring-blue-400/60 shadow-2xl" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- About -->
   <section id="about" class="mt-12 md:mt-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-6">
         <div class="md:col-span-2 glass rounded-2xl p-8">
-          <h2 class="text-2xl md:text-3xl font-bold text-slate-100">Bio</h2>
-          <p class="mt-4 text-slate-300">
+          <h2 class="text-2xl md:text-3xl font-bold">Bio</h2>
+          <p class="mt-4">
             I’m a cybersecurity engineer with 5+ years of hands-on experience in Cybersecurity with a specialized interest in Vulnerability Assessment and Penetration Testing across networks, hosts, APIs, and web applications.
             I’ve helped secure government and enterprise systems, translating technical findings into clear, actionable remediation.
           </p>
-          <ul class="mt-4 space-y-2 text-slate-300">
-            <li><span class="font-semibold text-slate-200">Focus:</span> Web & API security, red teaming, cloud security</li>
-            <li><span class="font-semibold text-slate-200">Methods/Frameworks:</span> OWASP Top 10, NIST, risk-based reporting</li>
-            <li><span class="font-semibold text-slate-200">Currently:</span> Security researcher contributing to sector-wide VAPT/SOC projects in Africa</li>
+          <ul class="mt-4 space-y-2">
+            <li><span class="font-semibold">Focus:</span> Web &amp; API security, red teaming, cloud security</li>
+            <li><span class="font-semibold">Methods/Frameworks:</span> OWASP Top 10, NIST, risk-based reporting</li>
+            <li><span class="font-semibold">Currently:</span> Security researcher contributing to sector-wide VAPT/SOC projects in Africa</li>
           </ul>
         </div>
         <div class="glass rounded-2xl p-8">
-          <h3 class="text-xl font-semibold text-slate-100">Quick Links</h3>
+          <h3 class="text-xl font-semibold">Quick Links</h3>
           <div class="mt-4 space-y-3">
-            <a class="block text-slate-300 link" href="assets/Emmanuel_Tega_Agbragu_Resume.pdf" target="_blank"><i class="far fa-file-pdf text-rose-400"></i> Resume</a>
-            <a class="block text-slate-300 link" href="certs/ECC-CEHMaster-Certificate-1.pdf" target="_blank">CEH Master</a>
-            <a class="block text-slate-300 link" href="certs/ECC-CEHPractical-Certificate(ANSI).pdf" target="_blank">CEH Practical</a>
-            <a class="block text-slate-300 link" href="certs/ECC-CEH-Certificate-1.pdf" target="_blank">CEH</a>
-            <a class="block text-slate-300 link" href="certs/AWS_CCP.pdf" target="_blank">AWS CCP</a>
-            <a class="block text-slate-300 link" href="https://certs.ine.com/f76e47a7-b7d7-4886-bd93-64c80deba02a#acc.snNdhoJV" target="_blank">eJPT</a>
+            <a class="block link" href="assets/Emmanuel_Tega_Agbragu_Resume.pdf" target="_blank"><i class="far fa-file-pdf text-rose-400"></i> Resume</a>
+            <a class="block link" href="certs/ECC-CEHMaster-Certificate-1.pdf" target="_blank">CEH Master</a>
+            <a class="block link" href="certs/ECC-CEHPractical-Certificate(ANSI).pdf" target="_blank">CEH Practical</a>
+            <a class="block link" href="certs/ECC-CEH-Certificate-1.pdf" target="_blank">CEH</a>
+            <a class="block link" href="certs/AWS_CCP.pdf" target="_blank">AWS CCP</a>
+            <a class="block link" href="https://certs.ine.com/f76e47a7-b7d7-4886-bd93-64c80deba02a#acc.snNdhoJV" target="_blank">eJPT</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects" class="mt-12 md:mt-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="glass rounded-2xl p-8">
         <div class="flex items-center justify-between flex-wrap gap-3">
-          <h2 class="text-2xl md:text-3xl font-bold text-slate-100">Featured Projects</h2>
-          <p class="text-slate-400 text-sm">Tip: Start with the e-gov VAPT work</p>
+          <h2 class="text-2xl md:text-3xl font-bold">Featured Projects</h2>
+          <p class="muted text-sm">Tip: Start with the e-gov VAPT work</p>
         </div>
         <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <article class="rounded-xl border border-slate-700/50 p-5 hover:border-sky-500/50 transition">
-            <h3 class="text-lg font-semibold text-slate-100">Vulnerability Assessment of E-Gov Services (2024)</h3>
-            <p class="mt-2 text-slate-300 text-sm">Assessed 50+ platforms; flagged 400+ issues (misconfig, weak CORS, XSS); built scripts for HTTP-methods/CVE triage; wrote exec-level summary.</p>
-            <p class="mt-2 text-slate-400 text-xs">Stack: Python, Bash, nmap, nuclei, custom scanners</p>
+          <article class="rounded-xl border border-white/10 p-5 hover:border-blue-400/50 transition">
+            <h3 class="text-lg font-semibold">Vulnerability Assessment of E-Gov Services (2024)</h3>
+            <p class="mt-2 text-sm muted">Assessed 50+ platforms; flagged 400+ issues (misconfig, weak CORS, XSS); built scripts for HTTP-methods/CVE triage; wrote exec-level summary.</p>
+            <p class="mt-2 text-xs muted">Stack: Python, Bash, nmap, nuclei, custom scanners</p>
             <div class="mt-3 flex items-center gap-3 text-sm">
-              <span class="px-2 py-1 rounded chip text-slate-300">Private org repo</span>
+              <span class="px-2 py-1 rounded chip">Private org repo</span>
             </div>
           </article>
-          <article class="rounded-xl border border-slate-700/50 p-5 hover:border-sky-500/50 transition">
-            <h3 class="text-lg font-semibold text-slate-100">NiD Chatbot Backend</h3>
-            <p class="mt-2 text-slate-300 text-sm">Secured API endpoints, improved logging and safe defaults, reviewed auth.</p>
-            <p class="mt-2 text-slate-400 text-xs">FastAPI/Flask, JWT, Docker</p>
+          <article class="rounded-xl border border-white/10 p-5 hover:border-blue-400/50 transition">
+            <h3 class="text-lg font-semibold">NiD Chatbot Backend</h3>
+            <p class="mt-2 text-sm muted">Secured API endpoints, improved logging and safe defaults, reviewed auth.</p>
+            <p class="mt-2 text-xs muted">FastAPI/Flask, JWT, Docker</p>
             <div class="mt-3">
-              <a class="text-sky-400 hover:text-sky-300" target="_blank" href="https://github.com/cylab-africa/NiD-Bot-Backend">View repo</a>
+              <a class="text-blue-400 hover:text-blue-300" target="_blank" href="https://github.com/cylab-africa/NiD-Bot-Backend">View repo</a>
             </div>
           </article>
-          <article class="rounded-xl border border-slate-700/50 p-5 hover:border-sky-500/50 transition">
-            <h3 class="text-lg font-semibold text-slate-100">Plaid Shell (C)</h3>
-            <p class="mt-2 text-slate-300 text-sm">Built a minimal Linux shell to understand parsing, piping, job control.</p>
-            <p class="mt-2 text-slate-400 text-xs">C, Linux, Make</p>
+          <article class="rounded-xl border border-white/10 p-5 hover:border-blue-400/50 transition">
+            <h3 class="text-lg font-semibold">Plaid Shell (C)</h3>
+            <p class="mt-2 text-sm muted">Built a minimal Linux shell to understand parsing, piping, job control.</p>
+            <p class="mt-2 text-xs muted">C, Linux, Make</p>
             <div class="mt-3">
-              <a class="text-sky-400 hover:text-sky-300" target="_blank" href="https://github.com/EmmyTegs05/A-12--FINAL-PROJECT">View repo</a>
+              <a class="text-blue-400 hover:text-blue-300" target="_blank" href="https://github.com/EmmyTegs05/A-12--FINAL-PROJECT">View repo</a>
             </div>
           </article>
-          <article class="rounded-xl border border-slate-700/50 p-5 hover:border-sky-500/50 transition">
-            <h3 class="text-lg font-semibold text-slate-100">DLP Rollout</h3>
-            <p class="mt-2 text-slate-300 text-sm">Implemented & tuned enterprise DLP policies; trained analysts; improved detections.</p>
-            <p class="mt-2 text-slate-400 text-xs">Symantec DLP, Splunk/Tenable</p>
+          <article class="rounded-xl border border-white/10 p-5 hover:border-blue-400/50 transition">
+            <h3 class="text-lg font-semibold">DLP Rollout</h3>
+            <p class="mt-2 text-sm muted">Implemented &amp; tuned enterprise DLP policies; trained analysts; improved detections.</p>
+            <p class="mt-2 text-xs muted">Symantec DLP, Splunk/Tenable</p>
           </article>
-          <article class="rounded-xl border border-slate-700/50 p-5 hover:border-sky-500/50 transition">
-            <h3 class="text-lg font-semibold text-slate-100">Privilege Access Management</h3>
-            <p class="mt-2 text-slate-300 text-sm">Deployed CyberArk (PVWA, PSM, CPM, PSMP, AAM); enforced admin access controls.</p>
-            <p class="mt-2 text-slate-400 text-xs">CyberArk Suite</p>
+          <article class="rounded-xl border border-white/10 p-5 hover:border-blue-400/50 transition">
+            <h3 class="text-lg font-semibold">Privilege Access Management</h3>
+            <p class="mt-2 text-sm muted">Deployed CyberArk (PVWA, PSM, CPM, PSMP, AAM); enforced admin access controls.</p>
+            <p class="mt-2 text-xs muted">CyberArk Suite</p>
           </article>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Skills -->
   <section id="skills" class="mt-12 md:mt-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="glass rounded-2xl p-8">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-100">Skills Snapshot</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-6 text-slate-300">
+        <h2 class="text-2xl md:text-3xl font-bold">Skills Snapshot</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-6">
           <div>
-            <h3 class="font-semibold text-slate-200">AppSec & VAPT</h3>
+            <h3 class="font-semibold">AppSec &amp; VAPT</h3>
             <div class="mt-2 flex flex-wrap gap-2">
               <span class="chip px-2 py-1 rounded">Recon</span>
               <span class="chip px-2 py-1 rounded">API testing</span>
@@ -162,7 +193,7 @@
             </div>
           </div>
           <div>
-            <h3 class="font-semibold text-slate-200">SOC</h3>
+            <h3 class="font-semibold">SOC</h3>
             <div class="mt-2 flex flex-wrap gap-2">
               <span class="chip px-2 py-1 rounded">Elastic Security</span>
               <span class="chip px-2 py-1 rounded">Wazuh</span>
@@ -171,7 +202,7 @@
             </div>
           </div>
           <div>
-            <h3 class="font-semibold text-slate-200">Network/Host</h3>
+            <h3 class="font-semibold">Network/Host</h3>
             <div class="mt-2 flex flex-wrap gap-2">
               <span class="chip px-2 py-1 rounded">Enumeration</span>
               <span class="chip px-2 py-1 rounded">Lateral movement</span>
@@ -180,7 +211,7 @@
             </div>
           </div>
           <div>
-            <h3 class="font-semibold text-slate-2 00">Ops & IR</h3>
+            <h3 class="font-semibold">Ops &amp; IR</h3>
             <div class="mt-2 flex flex-wrap gap-2">
               <span class="chip px-2 py-1 rounded">Log review</span>
               <span class="chip px-2 py-1 rounded">Alert triage</span>
@@ -189,8 +220,8 @@
           </div>
         </div>
         <div class="mt-6">
-          <h3 class="font-semibold text-slate-200">Scripting</h3>
-          <div class="mt-2 flex flex-wrap gap-2 text-slate-300">
+          <h3 class="font-semibold">Scripting</h3>
+          <div class="mt-2 flex flex-wrap gap-2">
             <span class="chip px-2 py-1 rounded">Python</span>
             <span class="chip px-2 py-1 rounded">Bash</span>
           </div>
@@ -199,52 +230,40 @@
     </div>
   </section>
 
-  <section id="utils" class="mt-12 md:mt-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="glass rounded-2xl p-8">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-100">Selected Utilities</h2>
-        <ul class="mt-4 space-y-2 text-slate-300">
-          <li><code class="text-sky-300">http_options_scanner.py</code> — concurrent OPTIONS/TRACE/PUT detection with CORS notes</li>
-          <li><code class="text-sky-300">endpoints_filter.py</code> — dedup + static/resource filter for cleaner scans</li>
-          <li><code class="text-sky-300">cve_summary.py</code> — quick CVE aggregation from multiple scanners</li>
-        </ul>
-        <p class="mt-3 text-slate-400 text-sm">Open-sourcing redacted versions on request.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- Certifications -->
   <section id="certs" class="mt-12 md:mt-20">
     <div class="max-w-6xl mx-auto px-4">
       <div class="glass rounded-2xl p-8">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-100">Certifications & Training</h2>
-        <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5 text-slate-300">
-          <a class="rounded-lg border border-emerald-500/40 p-4 hover:border-emerald-400/60 transition" target="_blank" href="certs/ECC-CEHMaster-Certificate-1.pdf">CEH Master</a>
-          <a class="rounded-lg border border-emerald-500/40 p-4 hover:border-emerald-400/60 transition" target="_blank" href="certs/ECC-CEHPractical-Certificate(ANSI).pdf">CEH Practical</a>
-          <a class="rounded-lg border border-emerald-500/40 p-4 hover:border-emerald-400/60 transition" target="_blank" href="certs/ECC-CEH-Certificate-1.pdf">CEH</a>
-          <a class="rounded-lg border border-yellow-500/40 p-4 hover:border-yellow-400/60 transition" target="_blank" href="certs/AWS_CCP.pdf">AWS CCP</a>
-          <a class="rounded-lg border border-indigo-500/40 p-4 hover:border-indigo-400/60 transition" target="_blank" href="https://certs.ine.com/f76e47a7-b7d7-4886-bd93-64c80deba02a#acc.snNdhoJV">eJPT</a>
-          <a class="rounded-lg border border-slate-500/40 p-4 hover:border-slate-400/60 transition" target="_blank" href="certs/">More</a>
+        <h2 class="text-2xl md:text-3xl font-bold">Certifications &amp; Training</h2>
+        <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <a class="rounded-lg border border-green-400/50 p-4 hover:border-green-300/70 transition" target="_blank" href="certs/ECC-CEHMaster-Certificate-1.pdf">CEH Master</a>
+          <a class="rounded-lg border border-green-400/50 p-4 hover:border-green-300/70 transition" target="_blank" href="certs/ECC-CEHPractical-Certificate(ANSI).pdf">CEH Practical</a>
+          <a class="rounded-lg border border-green-400/50 p-4 hover:border-green-300/70 transition" target="_blank" href="certs/ECC-CEH-Certificate-1.pdf">CEH</a>
+          <a class="rounded-lg border border-yellow-400/50 p-4 hover:border-yellow-300/70 transition" target="_blank" href="certs/AWS_CCP.pdf">AWS CCP</a>
+          <a class="rounded-lg border border-indigo-400/50 p-4 hover:border-indigo-300/70 transition" target="_blank" href="https://certs.ine.com/f76e47a7-b7d7-4886-bd93-64c80deba02a#acc.snNdhoJV">eJPT</a>
+          <a class="rounded-lg border border-white/15 p-4 hover:border-white/30 transition" target="_blank" href="certs/">More</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="mt-12 md:mt-20 mb-16">
     <div class="max-w-6xl mx-auto px-4">
       <div class="glass rounded-2xl p-8">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-100">Contact</h2>
-        <div class="mt-6 grid md:grid-cols-3 gap-4 text-slate-300">
-          <a href="mailto:emmanuelagbragu@gmail.com" class="rounded-lg border border-slate-600/50 p-4 hover:border-sky-500/60 transition"><i class="fas fa-envelope text-sky-400"></i> emmanuelagbragu@gmail.com</a>
-          <a href="https://www.linkedin.com/in/emmanuel-agbragu" target="_blank" class="rounded-lg border border-slate-600/50 p-4 hover:border-sky-500/60 transition"><i class="fab fa-linkedin text-sky-400"></i> LinkedIn</a>
-          <a href="https://emmytegs05.github.io/" target="_blank" class="rounded-lg border border-slate-600/50 p-4 hover:border-sky-500/60 transition"><i class="fas fa-globe text-sky-400"></i> Website</a>
+        <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+        <div class="mt-6 grid md:grid-cols-3 gap-4">
+          <a href="mailto:emmanuelagbragu@gmail.com" class="rounded-lg border border-white/15 p-4 hover:border-blue-400/60 transition"><i class="fas fa-envelope text-blue-300"></i> &nbsp;emmanuelagbragu@gmail.com</a>
+          <a href="https://www.linkedin.com/in/emmanuel-agbragu" target="_blank" class="rounded-lg border border-white/15 p-4 hover:border-blue-400/60 transition"><i class="fab fa-linkedin text-blue-300"></i> &nbsp;LinkedIn</a>
+          <a href="https://emmytegs05.github.io/EmmyTegs05/" target="_blank" class="rounded-lg border border-white/15 p-4 hover:border-blue-400/60 transition"><i class="fas fa-globe text-blue-300"></i> &nbsp;Website</a>
         </div>
-        <p class="mt-4 text-slate-400 text-sm">Open to roles in Penetration Testing / Red Team / AppSec.</p>
+        <p class="mt-4 muted text-sm">Open to roles in Penetration Testing / Red Team / AppSec.</p>
       </div>
     </div>
   </section>
 
-  <footer class="py-8 text-center text-slate-400">
-    <p>© <script>document.write(new Date().getFullYear())</script> Emmanuel Tega. Built for GitHub Pages.</p>
+  <footer class="py-8 text-center muted">
+    © <script>document.write(new Date().getFullYear())</script> Emmanuel Tega. Built for GitHub Pages.
   </footer>
 </body>
 </html>
