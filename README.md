@@ -3,7 +3,7 @@
 # Hello, I'm Emmanuel 👋
 **Security Researcher · Penetration Tester · Cybersecurity Engineer**
 
-[Website](https://emmytegs05.github.io/) ·
+[Portfolio](https://emmytegs05.github.io/EmmyTegs05/) ·
 [Resume (PDF)](./assets/Emmanuel_Tega_Agbragu_Resume.pdf) ·
 [Email](mailto:emmanuelagbragu@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/emmanuel-agbragu)
