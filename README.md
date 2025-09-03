@@ -13,7 +13,12 @@
 ---
 
 ## 👨‍💻 About Me
+<p style="text-align: justify;">
+
 I’m a cybersecurity engineer with 5+ years of hands-on experience in **Cybersecurity** with a specialized interest in **Vulnerability Assessment and Penetration Testing** on different aspects of Networks, hosts, APIs, and web applications. I’ve helped secure government and enterprise systems, translating technical findings into **clear, actionable remediation** for both technical and non-technical stakeholders.
+
+</p>
+
 
 - **Focus:** Web & API security, red teaming, cloud security  
 - **Methods/Frameworks:** OWASP Top 10, NIST, risk-based reporting  
