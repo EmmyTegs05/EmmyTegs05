@@ -12,7 +12,7 @@
 
 ---
 
-## 👨‍💻 About Me
+## 👨‍💻 Bio
 
 <div align="justify">
 
