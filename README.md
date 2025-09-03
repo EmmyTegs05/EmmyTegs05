@@ -86,7 +86,7 @@ I’m a cybersecurity engineer with 5+ years of hands-on experience in **Cyberse
 [![CEH](https://img.shields.io/badge/CEH-14b8a6?style=for-the-badge)](./certs/ECC-CEH-Certificate-1.pdf)
 
 [![AWS CCP](https://img.shields.io/badge/AWS_CCP-232f3e?style=for-the-badge&logo=amazon-aws&logoColor=white)](./certs/AWS_CCP.pdf)
-[![eJPT](https://img.shields.io/badge/eJPT-1e3a8a?style=for-the-badge)](<a href="https://certs.ine.com/f76e47a7-b7d7-4886-bd93-64c80deba02a#acc.snNdhoJV">)
+(<a href="https://certs.ine.com/f76e47a7-b7d7-4886-bd93-64c80deba02a#acc.snNdhoJV">)[![eJPT](https://img.shields.io/badge/eJPT-1e3a8a?style=for-the-badge)]
 
 [![More](https://img.shields.io/badge/More_Certs-Folder-64748b?style=for-the-badge)](./certs/)
 
