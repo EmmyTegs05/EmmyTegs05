@@ -32,7 +32,7 @@ I’m a cybersecurity engineer with 5+ years of hands-on experience in **Cyberse
 | Project | What I did | Stack / Tools | Links |
 |---|---|---|---|
 | **Vulnerability Assessment of E-Gov Services (2024)** | Assessed 50+ platforms; flagged 400+ issues (misconfig, weak CORS, XSS); built scripts for HTTP-methods/CVE triage; wrote exec-level summary | Python, Bash, nmap, nuclei, custom scanners | org repo: `cylab-africa/e-gov-2025` *(ask for access)* |
-| **NiD Chatbot Backend** | Secured API endpoints, improved logging and safe defaults, reviewed auth | FastAPI/Flask, JWT, Docker| `cylab-africa/NiD-Bot-Backend` |
+| **Vulnerability Assessment of NiD Chatbot** | Secured API endpoints, improved logging and safe defaults, reviewed auth | FastAPI/Flask, JWT, Docker| `cylab-africa/NiD-Bot-Backend` |
 | **Plaid Shell (C)** | Built a minimal Linux shell to understand parsing, piping, job control | C, Linux, Make | `EmmyTegs05/A-12--FINAL-PROJECT` |
 | **DLP Rollout** | Implemented & tuned enterprise DLP policies; trained analysts; improved detections | Symantec DLP, Splunk/Tenable |
 | **Privilege Access Management** | Deployed CyberArk (PVWA, PSM, CPM, PSMP, AAM); enforced admin access controls | CyberArk Suite |
