@@ -16,7 +16,7 @@
 
 <div align="justify">
 
-I’m a cybersecurity engineer with 5+ years of hands-on experience in **Cybersecurity** with a specialized interest in **Vulnerability Assessment and Penetration Testing** across various aspects of Networks, hosts, APIs, and web applications. I’ve helped secure government and enterprise systems, translating technical findings into **clear, actionable remediation** for both technical and non-technical stakeholders.
+I’m a cybersecurity engineer with 5+ years of hands-on experience in **Cybersecurity** with a focus on **Vulnerability Assessment and Penetration Testing** in a variety of Network, host, API, and web application domains. I’ve helped secure government and enterprise systems, translating technical findings into **clear, actionable remediation** for both technical and non-technical stakeholders.
 
 </div>
 
