@@ -24,7 +24,7 @@ My research interests lie at the intersection of offensive security, system auto
 
 
 
-- **Focus:** Web & API security, red teaming, cloud security  
+- **Focus:** Web & API security, AI-driven Security, red teaming, cloud security  
 - **Methods/Frameworks:** OWASP Top 10, NIST, risk-based reporting  
 - **Currently:** Security researcher contributing to sector-wide VAPT/SOC projects in Africa
 
