@@ -4,7 +4,7 @@
 **Security Researcher · Penetration Tester · Cybersecurity Engineer**
 
 [Portfolio](https://emmytegs05.github.io/EmmyTegs05/) ·
-[Resume (PDF)](./assets/Emmanuel_Tega_Agbragu_Resume.pdf) ·
+[Resume (PDF)](./assets/Emmanuel_Agbragu_Resume.pdf) ·
 [Email](mailto:emmanuelagbragu@gmail.com) ·
 [LinkedIn](https://www.linkedin.com/in/emmanuel-agbragu)
 
