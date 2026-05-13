@@ -16,17 +16,17 @@
 
 <div align="justify">
 
-I’m a cybersecurity engineer with 5+ years of hands-on experience in **Cybersecurity** with a focus on **Vulnerability Assessment and Penetration Testing** in a variety of Network, host, API, and web application domains. I’ve helped secure government and enterprise systems, translating technical findings into **clear, actionable remediation** for both technical and non-technical stakeholders.
+I’m a cybersecurity and network security engineer with 4+ years of hands-on experience in **Cybersecurity** with a focus on ** Network security, Vulnerability Assessment and Penetration Testing** in a variety of Network, host, digital infrastruture, and web application domains. I’ve helped secure large-scale networks and enterprise systems, translating technical findings into **clear, actionable remediation** for both technical and non-technical stakeholders.
 
-My research interests lie at the intersection of offensive security, system automation, and resilience, with a primary focus on advancing vulnerability detection through fuzzing and dynamic analysis
+My experience spans firewall configuration, IDS/IPS deployment, SIEM monitoring, Vulneranbility Assessment and Management, penetration testing and privileged access management, with a strong foundation in security solutions implementation and troubleshooting, vulnerability assessment and penetration testing.
 
 </div>
 
 
 
-- **Focus:** Web & API security, AI-driven Security, red teaming, cloud security  
-- **Methods/Frameworks:** OWASP Top 10, NIST, risk-based reporting  
-- **Currently:** Security researcher contributing to sector-wide VAPT/SOC projects in Africa
+- **Focus:** Network security, Web & API security, vulnerability assessment, penetration testing, cloud security  
+- **Methods/Frameworks:** OWASP, NIST, PCI-DSS, MITRE ATTACK  
+# - **Currently:** Security researcher contributing to sector-wide VAPT/SOC projects in Africa
 
 ---
 
