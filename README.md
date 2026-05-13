@@ -18,7 +18,7 @@
 
 I’m a cybersecurity and network security engineer with 4+ years of hands-on experience in **Cybersecurity** with a focus on **Network** **security**, **Vulnerability Assessment** and **Penetration Testing** in a variety of Network, host, digital infrastruture, and web application domains. I’ve helped secure large-scale networks and enterprise systems, translating technical findings into **clear, actionable remediation** for both technical and non-technical stakeholders.
 
-My experience spans firewall configuration, IDS/IPS deployment, SIEM monitoring, Vulneranbility Assessment and Management, penetration testing and privileged access management, with a strong foundation in security solutions implementation and troubleshooting, vulnerability assessment and penetration testing.
+My experience spans firewall configuration, IDS/IPS deployment, SIEM monitoring, Vulnerability Assessment and Management, penetration testing and privileged access management, with a strong foundation in security solutions implementation and troubleshooting, alongside deep research exposure conducting vulnerability assessments and VAPT engagemnets across digital public infrastructure at the Upanzi Lab.
 
 </div>
 
