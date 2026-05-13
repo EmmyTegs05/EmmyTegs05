@@ -26,7 +26,6 @@ My experience spans firewall configuration, IDS/IPS deployment, SIEM monitoring,
 
 - **Focus:** Network security, Web & API security, vulnerability assessment, penetration testing, cloud security  
 - **Methods/Frameworks:** OWASP, NIST, PCI-DSS, MITRE ATTACK  
-# - **Currently:** Security researcher contributing to sector-wide VAPT/SOC projects in Africa
 
 ---
 
