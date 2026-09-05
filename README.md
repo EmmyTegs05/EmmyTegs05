@@ -91,7 +91,7 @@ Most recently, as a **Security Researcher at the Upanzi Network, Carnegie Mellon
 
 ## 📄 Resume
 
-[📄 View Resume](./assets/Emmanuel_Agbragu_Resume.pdf)
+[📄 View Resume](./assets/Emmanuel_Tega_Agbragu_Resume.pdf)
 
 ---
 
